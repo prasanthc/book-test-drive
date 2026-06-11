@@ -1,0 +1,91 @@
+<section class="booking-shell">
+  <article class="booking-card">
+    <p class="eyebrow">Nevo EV test drive booking</p>
+    <h1>Book a test drive in seconds</h1>
+
+    <div class="grid two-up">
+      <label>
+        First name
+        <input [(ngModel)]="customerFirstName" name="customerFirstName" type="text" />
+      </label>
+      <label>
+        Last Name
+        <input [(ngModel)]="customerLastName" name="customerLasttName" type="text" />
+      </label>
+    </div>
+
+    <div class="grid two-up">
+         <label>
+        Phone
+        <input [(ngModel)]="customerPhone" name="customerPhone" type="text" />
+      </label>
+      <label>
+        Email
+        <input [(ngModel)]="customerEmail" name="customerEmail" type="email" />
+      </label>
+    </div>
+
+    <div class="grid two-up">
+      <label>
+        Pick a date
+        <select [(ngModel)]="selectedDate" name="selectedDate">
+          <option *ngFor="let day of next14Days" [value]="day.value">
+            {{ day.label }}
+          </option>
+        </select>
+      </label>
+      <label>
+        Start time (UTC)
+        <input
+          [(ngModel)]="selectedTime"
+          name="selectedTime"
+          type="time"
+          step="900"
+        />
+      </label>
+    </div>
+
+    <div class="grid two-up">
+      <!-- <label>
+        Vehicle type
+        <input [(ngModel)]="vehicleType" name="vehicleType" type="text" />
+      </label> -->
+      <label>
+        Location
+        <select [(ngModel)]="location" name="location">
+          <option value="dublin">Dublin</option>
+          <option value="cork">Cork</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="actions">
+      <button type="button" (click)="checkAvailability()">
+        Check availability
+      </button>
+    </div>
+
+    <p class="status">{{ availabilityMessage }}</p>
+
+    <div class="vehicle-list" *ngIf="availableVehicles.length; else emptyState">
+      <article class="vehicle-card" *ngFor="let vehicle of availableVehicles">
+        <div>
+          <h2>{{ vehicle.type }}</h2>
+          <p>{{ vehicle.id }} · {{ vehicle.location | titlecase }}</p>
+        </div>
+        <button type="button" (click)="bookTestDrive(vehicle.id)">
+          Reserve this slot
+        </button>
+      </article>
+    </div>
+
+    <ng-template #emptyState>
+      <p class="empty-state">
+        No suitable vehicle is currently available for the chosen slot. Try
+        another date or location.
+      </p>
+    </ng-template>
+
+    <p class="booking-note" *ngIf="bookingMessage">{{ bookingMessage }}</p>
+  </article>
+</section>
