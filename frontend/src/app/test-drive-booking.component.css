@@ -30,6 +30,16 @@ input, select, button {
   color: #eff6ff;
 }
 
+input[type='time'] {
+  color-scheme: light;
+  accent-color: #eff6ff;
+}
+
+input[type='time']::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(1.2);
+  cursor: pointer;
+}
+
 .actions { display: flex; justify-content: flex-end; margin-top: 12px; }
 button {
   cursor: pointer;
