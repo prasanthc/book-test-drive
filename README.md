@@ -7,17 +7,21 @@ This workspace contains:
 
 ## Run the backend
 
+```bash
 cd backend
 npm install
 npm run dev
+```
 
-The API will be available at http://localhost:4000.
+The API will be available at http://localhost:3000.
 
 ## Run the frontend
 
+```bash
 cd frontend
 npm install
 npm run start
+```
 
 The Angular UI will be available at http://localhost:4200.
 
@@ -25,4 +29,3 @@ The Angular UI will be available at http://localhost:4200.
 
 - POST /availability
 - POST /bookings
-

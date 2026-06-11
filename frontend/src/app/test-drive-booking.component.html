@@ -66,6 +66,7 @@
     </div>
 
     <p class="status">{{ availabilityMessage }}</p>
+    <p class="validation-note" *ngIf="validationMessage">{{ validationMessage }}</p>
 
     <div class="vehicle-list" *ngIf="availableVehicles.length; else emptyState">
       <article class="vehicle-card" *ngFor="let vehicle of availableVehicles">
@@ -80,10 +81,10 @@
     </div>
 
     <ng-template #emptyState>
-      <p class="empty-state">
+      <!-- <p class="empty-state">
         No suitable vehicle is currently available for the chosen slot. Try
         another date or location.
-      </p>
+      </p> -->
     </ng-template>
 
     <p class="booking-note" *ngIf="bookingMessage">{{ bookingMessage }}</p>

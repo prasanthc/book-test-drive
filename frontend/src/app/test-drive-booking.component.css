@@ -19,9 +19,9 @@
 h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); margin: 0 0 8px; }
 .lede { color: #dbeafe; max-width: 680px; }
 
-.grid { display: grid; gap: 14px; }
+.grid { display: grid; margin-top: 18px; gap: 18px; }
 .two-up { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-label { display: grid; gap: 8px; color: #eff6ff; font-weight: 600; }
+label { display: grid; gap: 10px; color: #eff6ff; font-weight: 600; }
 input, select, button {
   border-radius: 12px;
   border: 1px solid rgba(148, 163, 184, 0.35);
@@ -39,7 +39,8 @@ button {
   border: none;
 }
 
-.status, .booking-note { color: #bfdbfe; }
+.status, .booking-note, .validation-note { color: #bfdbfe; }
+.validation-note { margin-top: 6px; font-size: 0.95rem; }
 
 .vehicle-list { display: grid; gap: 12px; margin-top: 14px; }
 .vehicle-card {

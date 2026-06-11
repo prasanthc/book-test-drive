@@ -71,6 +71,24 @@
       "customerName": "Prasanth Chandran",
       "customerPhone": "9841313177",
       "customerEmail": "prasanthgeek@gmail.com"
+    },
+    {
+      "id": 18734,
+      "vehicleId": "tesla_1002",
+      "startDateTime": "2026-06-24T10:00:00Z",
+      "endDateTime": "2026-06-24T10:45:00.000Z",
+      "customerName": "Prasanth Chandran",
+      "customerPhone": "9841313177",
+      "customerEmail": "prasanthgeek@gmail.com"
+    },
+    {
+      "id": 18735,
+      "vehicleId": "tesla_1002",
+      "startDateTime": "2026-06-15T10:00:00Z",
+      "endDateTime": "2026-06-15T10:45:00.000Z",
+      "customerName": "Prasanth Chandran",
+      "customerPhone": "9841313177",
+      "customerEmail": "prasanthgeek@gmail.com"
     }
   ]
 }
