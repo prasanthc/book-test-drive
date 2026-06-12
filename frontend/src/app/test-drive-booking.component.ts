@@ -90,8 +90,9 @@ export class TestDriveBookingComponent {
             this.bookingMessage = response.reason || 'The slot could not be reserved.';
           }
         },
-        error: () => {
-          this.bookingMessage = 'Booking failed. Verify the backend is running.';
+        error: (response) => {
+          console.log("response", response);
+          this.bookingMessage = response.error.message || response.error.reason || 'Booking failed. Verify the backend is running.';
         },
       });
   }
