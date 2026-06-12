@@ -25,7 +25,8 @@ npm run start
 
 The Angular UI will be available at http://localhost:4200.
 
-## API overview
+## Configure Vehicle Type
 
-- POST /availability
-- POST /bookings
+```bash
+frontend -> src -> app -> app.component.ts -> Change VehicleType inside component
+```
